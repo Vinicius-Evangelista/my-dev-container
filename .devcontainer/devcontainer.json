@@ -1,0 +1,30 @@
+{
+  "name": "DotNet 9 Development Environment",
+  "dockerComposeFile": ["docker-compose.yml"],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "features": {
+      "ghcr.io/devcontainers/features/dotnet:1": {
+          "version": "9.0-preview"
+      },
+      "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "ms-dotnettools.csharp",
+              "ms-dotnettools.dotnet-interactive-vscode",
+              "formulahendry.dotnet-test-explorer",
+              "ms-azuretools.vscode-docker"
+          ],
+          "settings": {
+              "omnisharp.enableEditorConfigSupport": true,
+              "omnisharp.enableRoslynAnalyzers": true
+          }
+      }
+  },
+  "forwardPorts": [5000, 5432, 6379, 5672, 15672],
+  "postCreateCommand": "dotnet restore",
+  "remoteUser": "vscode",
+  "shutdownAction": "stopCompose"
+}
