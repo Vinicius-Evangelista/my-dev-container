@@ -2,7 +2,7 @@
   "name": "DotNet 9 Development Environment",
   "dockerComposeFile": ["docker-compose.yml"],
   "service": "app",
-  "workspaceFolder": "/workspace",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "features": {},
    
   "customizations": {
