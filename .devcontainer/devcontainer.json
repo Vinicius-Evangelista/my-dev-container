@@ -8,6 +8,5 @@
   "customizations": {
   },
   "forwardPorts": [5000, 5432, 6379, 5672, 15672],
-  "postCreateCommand": "dotnet restore",
   "shutdownAction": "stopCompose"
 }
