@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/devcontainers/dotnet:9.0-preview
+ARG VARIANT=9.0-bookworm-slim
+FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 
 # Install additional packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
