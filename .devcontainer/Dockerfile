@@ -1,4 +1,4 @@
-ARG VARIANT=9.0-bookworm-slim
+ARG VARIANT=9.0
 FROM mcr.microsoft.com/dotnet/sdk:${VARIANT}
 
 # Install additional packages
